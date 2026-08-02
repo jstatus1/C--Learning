@@ -1,0 +1,5 @@
+.DS_Store
+
+# Local C++ build outputs (macOS)
+main
+*.dSYM/
