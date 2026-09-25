@@ -20,10 +20,23 @@
     When we enter the curly braces to initialize x, it is already declared but still 
     uninitialized. The nested scope x inside of the initialization braces then looks outwards 
     to the local scope x, which holds a garbage value and assigns it as such. 
-    This initialization is functionally identical to: int x; x = x;
+    This initialization is functionally identical to: 
+        int x; 
+        x = x;
 */
-int x{42};
+// int x{42};
+// int main() {
+//     int x{x};
+//     std::cout << x;
+// }
+
+struct Foo {
+    int a;
+    int b;
+    int c;
+};
+
 int main() {
-    int x{x};
-    std::cout << x;
+    Foo foo{.c = 1}; // designated initializers
+    std::cout << foo.a << " | " << foo.b << " | " << foo.c; // Output: 1 0 3
 }
