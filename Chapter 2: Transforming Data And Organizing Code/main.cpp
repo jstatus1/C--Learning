@@ -1,3 +1,4 @@
+#include "add.h" //Insert contents of add.h 
 #include <iostream>
 
 int add(int x, int y); // forward declaration of add() (using a function declaration)
